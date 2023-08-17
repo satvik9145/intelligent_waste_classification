@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Classification</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <header>
+        <h1> Intelligent Waste Classification</h1>
+        <p>Use your webcam to classify waste materials</p>
+    </header>
+    <main>
+     
+            <section class="slideshow-container">
+                <div class="slideshow">
+                    <div class="slide"><img src="resources\plasticpng.png" alt="Slideshow Image 1"></div>
+                    <div class="slide"><img src="resources\ewastepng.crdownload" alt="Slideshow Image 2"></div>
+                    <div class="slide"><img src="resources\organic png.png" alt="Slideshow Image 3"></div>
+                </div>
+            </section>
+            <div class="video-container">
+                <video id="video" autoplay></video>
+                <div>
+                    <button class="button-neon" id="classify-button">Classify</button>
+                    <audio id="button-sound" src="audio\classifybutton.mp3"></audio>
+                </div>
+              
+             
+                <!-- Add audio elements for each class label sound effect -->
+                <audio id="cardboard-sound" src="cardboard.mp3"></audio>
+                <audio id="glass-sound" src="glass.mp3"></audio>
+                <audio id="metal-sound" src="metal.mp3"></audio>
+                <audio id="organic-sound" src="organic.mp3"></audio>
+                <audio id="paper-sound" src="paper.mp3"></audio>
+                <audio id="plastic-sound" src="plastic.mp3"></audio>
+                <audio id="trash-sound" src="trash.mp3"></audio>
+                <!-- Add audio elements for other class labels -->
+            </div>
+            
+            <section class="slideshow-container">
+                <div class="slideshow">
+                    <div class="slide"><img src="resources\paper.png" alt="Slideshow Image 4"></div>
+                    <div class="slide"><img src="resources\glassswaste.png" alt="Slideshow Image 5"></div>
+                    <div class="slide"><img src="resources\paperwastepng.png" alt="Slideshow Image 6"></div>
+                </div>
+            </section>
+            <br>
+       
+    </main>
+    <div id="result" class="result"></div>
+    <br>
+
+    <footer>
+        <p>Powered by TensorFlow.js</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="model\model.json"></script>
+    <script src="app.js"></script>
+</body>
+</html>
